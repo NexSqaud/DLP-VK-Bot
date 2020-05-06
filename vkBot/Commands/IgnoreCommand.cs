@@ -51,17 +51,25 @@ namespace VKBot.Commands
             {
                 if (userId == 0) return;
                 var user = api.Users.Get(new[] { userId }, ProfileFields.FirstName | ProfileFields.LastName | ProfileFields.Sex)[0];
-                Ignore.addIgnore(userId, $"{user.FirstName} {user.LastName}", user.Sex == Sex.Female);
-                api.Messages.Edit(new MessageEditParams()
-                {
-                    PeerId = message.PeerId.Value,
-                    MessageId = message.Id.Value,
-                    Message = $"🔇 [id{userId}|{user.FirstName} {user.LastName}] добавлен{(user.Sex == Sex.Female ? "а" : "")} в игнор-список"
-                });
+                var added = Ignore.addIgnore(userId, $"{user.FirstName} {user.LastName}", user.Sex == Sex.Female);
+                if(added)
+                    api.Messages.Edit(new MessageEditParams()
+                    {
+                        PeerId = message.PeerId.Value,
+                        MessageId = message.Id.Value,
+                        Message = $"🔇 [id{userId}|{user.FirstName} {user.LastName}] добавлен{(user.Sex == Sex.Female ? "а" : "")} в игнор-список"
+                    });
+                else
+                    api.Messages.Edit(new MessageEditParams()
+                    {
+                        PeerId = message.PeerId.Value,
+                        MessageId = message.Id.Value,
+                        Message = $"⚠ [id{userId}|{user.FirstName} {user.LastName}] уже в игнор-списоке"
+                    });
             }else if(message.Text[0] == '.')
             {
                 var text = Ignore.ignoreList.Count > 0 ? Ignore.ignoreList
-                    .Select((x, i) => $"{i + 1}. [id{x.Id}|{x.Name}]")
+                    .Select((x, i) => $"{i + 1}. [id{x.Id}|{x.Name}]\n")
                     .Aggregate((first, second) => first + second) : null;
                 api.Messages.Edit(new MessageEditParams()
                 {
