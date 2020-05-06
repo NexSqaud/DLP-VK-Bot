@@ -17,7 +17,7 @@ namespace VKBot
             {
                 ignoreList.Add(new Ignorable() { Id = userId, Name = name, Female = female });
                 save();
-                reutrn true;
+                return true;
             }
             return false;
         }
