@@ -2,6 +2,9 @@
 
 DLP ВК бот для пользователей. Написан на C# с использованием библеоткети [VkNet](https://github.com/vknet/vk) и [VkNetExtend](https://github.com/CaCTuCaTu4ECKuu/VkNetExtend)
 
+ВК разработчика: vk.com/ronamchornog
+Команда BlowOut Studio: vk.com/blowoutstudio
+
 ## Запуск
 
 1. В файле Program.cs замените "ТОКЕН" и `userId = 0` на свой токен и ID ВК. Необходимы разрешения к сообщениям и друзьям.
