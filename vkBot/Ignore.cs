@@ -11,10 +11,15 @@ namespace VKBot
 
         public static List<Ignorable> ignoreList = new List<Ignorable>();
 
-        public static void addIgnore(long userId, string name, bool female)
+        public static bool addIgnore(long userId, string name, bool female)
         {
-            ignoreList.Add(new Ignorable() { Id = userId, Name = name, Female = female });
-            save();
+            if (!ignoreList.Any(x => x.Id == userId))
+            {
+                ignoreList.Add(new Ignorable() { Id = userId, Name = name, Female = female });
+                save();
+                reutrn true;
+            }
+            return false;
         }
 
         public static Ignorable deleteIgnore(long userId)
