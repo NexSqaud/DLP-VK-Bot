@@ -83,7 +83,7 @@ namespace VKBot.Commands
                     return;
                 }
                 var addTemplate = message.Text.Split('\n').Length > 1 ? message.Text.Split('\n')
-                    .Aggregate((first, second) => first != $"+дшаб {templateName}" ? first + "\n" + second : second)
+                    .Aggregate((first, second) => first != $"+шаб {templateName}" ? first + "\n" + second : second)
                     : null;
                 List<Attachment> attachments = new List<Attachment>();
                 if(message.Attachments.Count > 0)
