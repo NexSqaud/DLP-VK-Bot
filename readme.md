@@ -2,8 +2,9 @@
 
 DLP ВК бот для пользователей. Написан на C# с использованием библеоткети [VkNet](https://github.com/vknet/vk) и [VkNetExtend](https://github.com/CaCTuCaTu4ECKuu/VkNetExtend)
 
-ВК разработчика: vk.com/ronamchornog
-Команда BlowOut Studio: vk.com/blowoutstudio
+ВК разработчика [https://vk.com/ronamchornog](https://vk.com/ronamchornog)
+
+Команда BlowOut Studio: [https://vk.com/ronamchornog](https://vk.com/ronamchornog)
 
 ## Запуск
 
