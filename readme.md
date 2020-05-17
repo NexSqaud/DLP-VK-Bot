@@ -4,7 +4,7 @@ DLP ВК бот для пользователей. Написан на C# с и�
 
 ВК разработчика [https://vk.com/ronamchornog](https://vk.com/ronamchornog)
 
-Команда BlowOut Studio: [https://vk.com/ronamchornog](https://vk.com/ronamchornog)
+Команда BlowOut Studio: [https://vk.com/blowoutstudio](https://vk.com/blowoutstudio)
 
 ## Запуск
 
