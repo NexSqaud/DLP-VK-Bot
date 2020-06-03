@@ -11,7 +11,7 @@ namespace VKBot.Commands
 {
     class BlackListCommand : ILongPollCommand
     {
-        public Regex CommandRegex => new Regex(@"^(?:[+-]чс)\s?\[id([0-9]+\|.*\])?", RegexOptions.IgnoreCase | RegexOptions.Compiled);
+        public Regex CommandRegex => new Regex(@"^(?:[+-]чс)\s?(\[id[0-9]+\|.*\])?", RegexOptions.IgnoreCase | RegexOptions.Compiled);
         public string CommandHelp => @"[📛] Черный список:
 📵 +чс [упоминание или ответ] - Добавляет пользователя в черный список.
 📱 -чс [упоминание или ответ] - Удаляет пользователя из черного списка.
