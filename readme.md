@@ -1,6 +1,6 @@
 # DLP VK Bot [![C#](https://img.shields.io/badge/language-C%23-brightgreen.svg)](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)) [![Windows](https://img.shields.io/badge/platform-Windows-0078d7.svg)](https://en.wikipedia.org/wiki/Microsoft_Windows) [![License](https://img.shields.io/github/license/NexSqaud/OsirisUpdate.svg)](LICENSE)
 
-DLP ВК бот для пользователей. Написан на C# с использованием библеоткети [VkNet](https://github.com/vknet/vk) и [VkNetExtend](https://github.com/CaCTuCaTu4ECKuu/VkNetExtend)
+DLP VK бот для пользователей. Написан на C# с использованием библиотек [VkNet](https://github.com/vknet/vk) и [VkNetExtend](https://github.com/CaCTuCaTu4ECKuu/VkNetExtend)
 
 ВК разработчика [https://vk.com/ronamchornog](https://vk.com/ronamchornog)
 
